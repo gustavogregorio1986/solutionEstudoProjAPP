@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class SobreComponent {
 
+  onButtonClick() {
+    alert('TI esta em alta, quanto mais estuda mais, vantagem de conhecimento temos, e podemos evoluir muito rapido.');
+  }
 }
