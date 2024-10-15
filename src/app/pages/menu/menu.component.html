@@ -1,1 +1,13 @@
-<p>menu works!</p>
+<nav>
+    <div class="menu-container">
+      <div class="logo">MyApp</div>
+      <button class="menu-toggle" (click)="toggleMenu()">&#9776;</button>
+      <ul [class.responsive]="isMenuOpen">
+        <li><a [routerLink]="['/']">Home</a></li>
+        <li><a [routerLink]="['/sobre']">Sobre</a></li>
+        <li><a [routerLink]="['/cadastro']">Cadastro</a></li>
+        <li><a [routerLink]="['/consulta']">Consulta</a></li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
