@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-consulta-endereco',
   standalone: true,
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './consulta-endereco.component.html',
   styleUrl: './consulta-endereco.component.css'
 })

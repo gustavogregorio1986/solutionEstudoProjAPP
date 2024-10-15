@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-consulta-telefone',
   standalone: true,
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './consulta-telefone.component.html',
   styleUrl: './consulta-telefone.component.css'
 })

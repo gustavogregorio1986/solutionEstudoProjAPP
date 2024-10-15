@@ -1,1 +1,27 @@
-<p>cadastro-telefone works!</p>
+<form>
+
+    <div class="mb-3">
+        <label for="Numero" class="form-label">Numero:</label>
+        <input
+          id="Numero"
+          type="text"
+          class="form-control"
+          placeholder="Digite o numero"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Tipo" class="form-label">Tipo:</label>
+        <select id="Tipo" class="form-select">
+          <option value="" disabled selected>Selecione o Tipo</option>
+          <option value="Residcencia">Residencia</option>
+          <option value="Comercial">Comercial</option>
+          <option value="Celular">Celular</option>
+        </select>
+      </div>
+  
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+  <hr/>
+  <app-footer></app-footer>
+  

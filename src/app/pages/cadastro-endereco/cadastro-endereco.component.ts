@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-cadastro-endereco',
   standalone: true,
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './cadastro-endereco.component.html',
   styleUrl: './cadastro-endereco.component.css'
 })
