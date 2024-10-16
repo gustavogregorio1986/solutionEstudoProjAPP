@@ -1,18 +1,20 @@
-<form>
+<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label for="nomeCliente" class="form-label">Nome do Cliente:</label>
       <input
-        id="nomeCliente"
+        id="NomeCliente"
         type="text"
+        formControlName="NomeCliente"
         class="form-control"
-        placeholder="Digite o nome"
+        placeholder="Digite o nome do cliente"
       />
     </div>
   
     <div class="mb-3">
-      <label for="emailCliente" class="form-label">Email:</label>
+      <label for="EmailCliente" class="form-label">Email:</label>
       <input
-        id="emailCliente"
+        id="EmailCliente"
+        formControlName="EmailCliente"
         type="email"
         class="form-control"
         placeholder="Digite o email"
@@ -24,8 +26,9 @@
         <input
           id="Cpf"
           type="text"
+          formControlName="Cpf"
           class="form-control"
-          placeholder="Digite o cpf"
+          placeholder="Digite o Cpf"
         />
       </div>
   

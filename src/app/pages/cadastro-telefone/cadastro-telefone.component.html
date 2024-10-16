@@ -1,9 +1,9 @@
-<form>
-
+<form [formGroup]="telefoneForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
         <label for="Numero" class="form-label">Numero:</label>
         <input
           id="Numero"
+          formControlName="Numero"
           type="text"
           class="form-control"
           placeholder="Digite o numero"
@@ -12,7 +12,7 @@
 
       <div class="mb-3">
         <label for="Tipo" class="form-label">Tipo:</label>
-        <select id="Tipo" class="form-select">
+        <select id="Tipo" formControlName="Tipo" class="form-select">
           <option value="" disabled selected>Selecione o Tipo</option>
           <option value="Residcencia">Residencia</option>
           <option value="Comercial">Comercial</option>

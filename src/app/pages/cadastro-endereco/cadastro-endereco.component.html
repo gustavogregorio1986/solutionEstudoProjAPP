@@ -1,8 +1,9 @@
-<form>
+<form [formGroup]="enderecoForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label for="Logradouro" class="form-label">Nome do Cliente:</label>
       <input
         id="Logradouro"
+        formControlName="Logradouro"
         type="text"
         class="form-control"
         placeholder="Digite o nome"
@@ -10,12 +11,13 @@
     </div>
   
     <div class="mb-3">
-      <label for="Complemento" class="form-label">Complemento:</label>
+      <label for="Compelemnto" class="form-label">Complemento:</label>
       <input
-        id="Complemento"
+        id="Compelemnto"
+        formControlName="Compelemnto"
         type="text"
         class="form-control"
-        placeholder="Digite o email"
+        placeholder="Digite o complemento"
       />
     </div>
 
@@ -23,6 +25,7 @@
       <label for="Bairro" class="form-label">Bairro:</label>
       <input
         id="Bairro"
+        formControlName="Bairro"
         type="text"
         class="form-control"
         placeholder="Digite o bairro"
@@ -33,6 +36,7 @@
       <label for="Cidade" class="form-label">Cidade:</label>
       <input
         id="Cidade"
+        formControlName="Cidade"
         type="text"
         class="form-control"
         placeholder="Digite o cidade"
@@ -41,7 +45,7 @@
   
     <div class="mb-3">
       <label for="Estado" class="form-label">Estado:</label>
-      <select id="Estado" class="form-select">
+      <select id="Estado" formControlName="Estado" class="form-select">
         <option value="" disabled selected>Selecione o estado</option>
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
