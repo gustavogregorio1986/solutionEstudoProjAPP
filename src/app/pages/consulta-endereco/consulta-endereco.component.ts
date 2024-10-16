@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
 
 @Component({
@@ -8,6 +8,9 @@ import { FooterComponent } from "../footer/footer.component";
   templateUrl: './consulta-endereco.component.html',
   styleUrl: './consulta-endereco.component.css'
 })
-export class ConsultaEnderecoComponent {
+export class ConsultaEnderecoComponent implements OnInit {
+  
+  ngOnInit(){
 
+  }
 }
