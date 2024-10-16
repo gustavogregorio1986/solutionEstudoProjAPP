@@ -14,16 +14,28 @@
           <h5 class="text-uppercase">Links Úteis</h5>
           <ul class="list-unstyled mb-0">
             <li>
-              <a href="#!" class="text-white">Home</a>
+              <a [routerLink]="['/']" class="text-white">Home</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Serviços</a>
+              <a [routerLink]="['/sobre']" class="text-white">Sobre</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Contato</a>
+              <a [routerLink]="['/cadastro']" class="text-white">Cadastro</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Ajuda</a>
+              <a [routerLink]="['/cadastroEndereco']" class="text-white">Cadastro de Endereco</a>
+            </li>
+            <li>
+              <a [routerLink]="['/cadastroTelefone']" class="text-white">Cadastro de telefone</a>
+            </li>
+            <li>
+              <a [routerLink]="['/consulta']" class="text-white">Consulta</a>
+            </li>
+            <li>
+              <a [routerLink]="['/consultaEndereco']" class="text-white">Consulta de endereço</a>
+            </li>
+            <li>
+              <a [routerLink]="['/consultaTelefone']" class="text-white">Consulta de telefone</a>
             </li>
           </ul>
         </div>
