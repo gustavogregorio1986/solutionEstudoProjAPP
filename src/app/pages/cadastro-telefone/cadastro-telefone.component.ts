@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TelefoneServiceService } from '../../services/telefone-service.service';
 
 @Component({
   selector: 'app-cadastro-telefone',
@@ -13,7 +14,7 @@ export class CadastroTelefoneComponent implements OnInit{
 
   telefoneForm!: FormGroup;
 
-  constructor(private fb: FormBuilder){
+  constructor(private telefoneService: TelefoneServiceService, private fb: FormBuilder){
     this.telefoneForm = this.fb.group({
         Tipo:['', Validators.required],
         Numero:['', Validators.required],
@@ -28,7 +29,7 @@ export class CadastroTelefoneComponent implements OnInit{
   onSubmit() {
     if (this.telefoneForm.valid) {
       console.log('Formulário do cliente:', this.telefoneForm.value);
-      // Lógica para processar os dados do formulário
+      this.telefoneService.cadastrar(this.telefoneForm.value);
     }
   }
 }

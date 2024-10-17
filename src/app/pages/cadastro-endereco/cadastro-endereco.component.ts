@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { EnderecoServiceService } from '../../services/endereco-service.service';
 
 @Component({
   selector: 'app-cadastro-endereco',
@@ -13,7 +14,7 @@ export class CadastroEnderecoComponent implements OnInit {
 
   enderecoForm!: FormGroup;
 
-   constructor(private fb: FormBuilder){
+   constructor(private enderecoService: EnderecoServiceService, private fb: FormBuilder){
       this.enderecoForm = this.fb.group({
         Logradouro:['', Validators.required],
         Compelemnto:['', Validators.required],
@@ -30,7 +31,7 @@ export class CadastroEnderecoComponent implements OnInit {
   onSubmit() {
     if (this.enderecoForm.valid) {
       console.log('Formulário do cliente:', this.enderecoForm.value);
-      // Lógica para processar os dados do formulário
+      this.enderecoService.adicionarEndereco(this.enderecoForm.value);
     }
   }
 }
