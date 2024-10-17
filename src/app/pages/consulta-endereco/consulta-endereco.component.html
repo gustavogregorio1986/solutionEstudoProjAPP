@@ -10,7 +10,14 @@
       </tr>
     </thead>
     <tbody>
-      
+      <tr *ngFor="let endereco of dados">
+        <td>{{ endereco.Id }}</td>
+        <td>{{ endereco.Logradouro }}</td>
+        <td>{{ endereco.Compelemnto }}</td>
+        <td>{{ endereco.Bairro }}</td>
+        <td>{{ endereco.Cidade }}</td>
+        <td>{{ endereco.Estado }}</td>
+      </tr>
     </tbody>
   </table>
   <app-footer></app-footer>

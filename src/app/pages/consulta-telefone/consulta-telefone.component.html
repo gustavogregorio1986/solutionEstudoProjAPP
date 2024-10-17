@@ -7,7 +7,11 @@
       </tr>
     </thead>
     <tbody>
-      
+      <tr *ngFor="let telefone of dados">
+        <td>{{ telefone.Id }}</td>
+        <td>{{ telefone.Tipo }}</td>
+        <td>{{ telefone.Numero }}</td>
+      </tr>
     </tbody>
   </table>
   <app-footer></app-footer>

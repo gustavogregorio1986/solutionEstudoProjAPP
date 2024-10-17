@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
+import { EnderecoServiceService } from '../../services/endereco-service.service';
+import { ClienteServiceService } from '../../services/cliente-service.service';
 
 @Component({
   selector: 'app-consulta',
@@ -10,7 +12,22 @@ import { FooterComponent } from "../footer/footer.component";
 })
 export class ConsultaComponent implements OnInit{
 
-  ngOnInit(){
+  dados: any[] = [];
 
+  constructor(private clienteService: ClienteServiceService) {}
+
+  ngOnInit(): void{
+    this.listarClientes();
+  }
+
+  listarClientes(){
+    this.clienteService.listarClientes().subscribe(
+      (response) => {
+        this.dados = response;
+      },
+      (error) => {
+        console.error('Erro ao carregar os dados', error);
+      }
+    );
   }
 }
